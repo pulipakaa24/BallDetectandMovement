@@ -26,8 +26,8 @@ while True:
         cv2.HOUGH_GRADIENT,
         dp=1,       # Inverse ratio of accumulator resolution to image resolution
         minDist=50,  # Minimum distance between detected centers
-        param1=50,   # Lower threshold for the internal Canny edge detector
-        param2=30,   # Threshold for center detection
+        param1=20,   # Lower threshold for the internal Canny edge detector
+        param2=45,   # Threshold for center detection
         minRadius=5, # Minimum radius to be detected
         maxRadius=100 # Maximum radius to be detected
     )
