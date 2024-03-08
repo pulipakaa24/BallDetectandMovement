@@ -30,8 +30,8 @@ while True:
     hsv = cv2.cvtColor(blurFrame, cv2.COLOR_BGR2HSV)
 
     # Define the color range you want to detect (here, it's green)
-    lower_green = np.array([30, 50, 50])  # HSV values for lower bound
-    upper_green = np.array([40, 255, 255])  # HSV values for upper bound
+    lower_green = np.array([40, 50, 50])  # HSV values for lower bound
+    upper_green = np.array([60, 255, 255])  # HSV values for upper bound
 
     # Threshold the image to get a binary mask
     mask = cv2.inRange(hsv, lower_green, upper_green)
