@@ -5,12 +5,12 @@ import xml.etree.ElementTree as ET
 from os import listdir, getcwd
 from os.path import join
 
-dirs = ['train', 'val']
-classes = ['person', 'car']
+dirs = ["Tennis"]
+classes = ['ball']
 
 def getImagesInDir(dir_path):
     image_list = []
-    for filename in glob.glob(dir_path + '*.jpg'):
+    for filename in glob.glob(dir_path + '\*.jpg'):
         image_list.append(filename)
 
     return image_list
@@ -32,7 +32,7 @@ def convert_annotation(dir_path, output_path, image_path):
     basename = os.path.basename(image_path)
     basename_no_ext = os.path.splitext(basename)[0]
 
-    in_file = open(dir_path + '/' + basename_no_ext + '.xml')
+    in_file = open(dir_path + '\\' + basename_no_ext + '.xml')
     out_file = open(output_path + basename_no_ext + '.txt', 'w')
     tree = ET.parse(in_file)
     root = tree.getroot()
@@ -51,11 +51,11 @@ def convert_annotation(dir_path, output_path, image_path):
         bb = convert((w,h), b)
         out_file.write(str(cls_id) + " " + " ".join([str(a) for a in bb]) + '\n')
 
-cwd = getcwd().replace("\\", '/')
+cwd = getcwd()
 
 for dir_path in dirs:
-    full_dir_path = cwd + '/' + dir_path
-    output_path = full_dir_path +'/yolo/'
+    full_dir_path = cwd + '\\' + dir_path
+    output_path = full_dir_path +'\\yolo\\'
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
