@@ -1,0 +1,66 @@
+{
+    "os": "Windows-10-10.0.22635-SP0",
+    "python": "3.11.9",
+    "heartbeatAt": "2024-04-15T16:24:58.168471",
+    "startedAt": "2024-04-15T16:24:57.456134",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--batch",
+        "16",
+        "--epochs",
+        "50",
+        "--data",
+        "tennis.yaml",
+        "--weights",
+        "yolov7-tiny.pt",
+        "--device",
+        "0",
+        "--workers",
+        "0"
+    ],
+    "state": "running",
+    "program": "C:\\Users\\pulip\\Documents\\github\\BallDetectandMovement\\train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/pulipakaa24/BallDetectandMovement.git",
+        "commit": "b36e64688759a46baeb0b4b86d6b4c4e71a34964"
+    },
+    "email": "pulipakaa24@outlook.com",
+    "root": "C:/Users/pulip/Documents/github/BallDetectandMovement",
+    "host": "DESKTOP-NP1CC1P",
+    "username": "pulip",
+    "executable": "C:\\Users\\pulip\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3801.0,
+        "min": 0.0,
+        "max": 3801.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3801.0,
+            "min": 0.0,
+            "max": 3801.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 827.6631355285645,
+            "used": 510.8133125305176
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060 Ti",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 31.889633178710938
+    }
+}
